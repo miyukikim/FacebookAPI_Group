@@ -1,5 +1,5 @@
 // === ACCESS TOKEN (KEEP PRIVATE!) ===
-const ACCESS_TOKEN = 'YOUR_ACCESS_TOKEN_HERE';
+const ACCESS_TOKEN = 'YOUR_LONG_LIVED_TOKEN_HERE';
 
 // === Dark Mode Toggle ===
 document.addEventListener('DOMContentLoaded', () => {
@@ -106,3 +106,4 @@ document.getElementById('fetchPageBtn').addEventListener('click', async () => {
     }
 
 });
+
