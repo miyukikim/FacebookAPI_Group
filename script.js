@@ -1,5 +1,5 @@
 // === ACCESS TOKEN (KEEP PRIVATE!) ===
-const ACCESS_TOKEN = 'EAAMRmZBI3YvsBQVZB8ZA7RkV3f7Dg00leNlKIlhAt4rYabwY1X4iCVbYmZB4nTspqS3KIcfMAmFbbyjnZBbOtceZBl0B78DjbmeToZBjIHrXHA2qMsoZBWjO9ZCsIX4MPGzGezBBosB9ZAaFh7BTdb9p9MvvZCaFnmkFVeQw8YrkPvVKEbBY6NTwZBagcZBTlXQIr0moXzrIXI2SZAFGi4ZBbopsCzSGPblm89KPDzUAOZCE8PFIdzrkKs1MC6LwOrac7tKvv5kIizHwDUVZCQ9HdU2YGOmK1KPQ6';
+const ACCESS_TOKEN = 'YOUR_ACCESS_TOKEN_HERE';
 
 // === Dark Mode Toggle ===
 document.addEventListener('DOMContentLoaded', () => {
@@ -104,4 +104,5 @@ document.getElementById('fetchPageBtn').addEventListener('click', async () => {
     } finally {
         toggleLoading(false);
     }
+
 });
