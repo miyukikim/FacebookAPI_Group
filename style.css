@@ -201,13 +201,24 @@ body.dark-mode .error {
 .hidden { display: none; }
 
 footer {
-    text-align: center;
-    margin-top: 80px;
-    padding: 20px;
-    color: #65676b;
+    text-align: center;       /* center text */
+    padding: 18px 10px;
+    color: #000000;
     font-size: 14px;
-    border-top: 1px solid #ddd;
-    transition: color 0.3s, border-color 0.3s;
+    border-top: 1px solid #dbe7ff;
+    margin-top: auto;
+    font-weight: 600;
+    background: #ffffff;
+}
+
+footer a {
+    color: #1877f2;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+footer a:hover {
+    text-decoration: underline;
 }
 
 body.dark-mode footer {
@@ -229,4 +240,5 @@ body.dark-mode footer {
         margin: 20px auto; 
         display: inline-flex;
     }
+
 }
