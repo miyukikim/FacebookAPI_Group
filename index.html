@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook Profile & Page Fetcher</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Facebook Profile Fetcher</h1>
+        <p>Direct fetch using access token • Personal use only</p>
+
+        <!-- Dark/Light Mode Toggle -->
+        <button id="themeToggle" aria-label="Toggle dark mode">🌙</button>
+    </header>
+
+    <main>
+        <section id="controls">
+            <button id="fetchProfileBtn">Fetch My Profile</button>
+            
+            <div class="page-selector">
+                <label for="pageSelect">Select a Page:</label>
+                <select id="pageSelect">
+                    <option value="">Select a page</option>
+                    <option value="868922896312556">Testing API</option>
+                    <option value="928106000383842">Testing 2.0</option>
+                </select>
+                <button id="fetchPageBtn">Fetch Page Profile</button>
+            </div>
+        </section>
+
+        <section id="dataSection" class="hidden">
+            <div id="profileCard" class="card"></div>
+        </section>
+
+        <div id="loading" class="loading hidden">Loading…</div>
+        <div id="errorMsg" class="error hidden"></div>
+    </main>
+
+    <footer>
+        Data provided by <strong>Facebook Graph API v24.0</strong> | Credits: Meta for Developers
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

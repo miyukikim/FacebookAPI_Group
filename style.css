@@ -1,0 +1,232 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(to bottom, #f0f2f5, #ffffff);
+    color: #1c1e21;
+    line-height: 1.6;
+    padding: 20px;
+    transition: background 0.3s, color 0.3s;
+    min-height: 100vh;
+}
+
+body.dark-mode {
+    background: linear-gradient(to bottom, #18191a, #242526);
+    color: #e4e6eb;
+}
+
+header { 
+    text-align: center; 
+    margin-bottom: 40px; 
+    position: relative;
+}
+
+h1 { 
+    color: #1877f2; 
+    font-size: 2.5rem; 
+}
+
+body.dark-mode h1 { 
+    color: #8ab4f8; 
+}
+
+/* Theme Toggle Button */
+#themeToggle {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#themeToggle:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+body.dark-mode #themeToggle:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+main { max-width: 900px; margin: 0 auto; }
+
+#controls {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 30px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: background 0.3s, box-shadow 0.3s;
+}
+
+body.dark-mode #controls {
+    background: #242526;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+button {
+    background: #1877f2;
+    color: white;
+    font-size: 16px;
+    padding: 12px 28px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 10px;
+    transition: background 0.3s;
+}
+
+button:hover { background: #166fe5; }
+
+.page-selector {
+    margin: 25px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.page-selector label {
+    font-weight: bold;
+    color: #1c1e21;
+}
+
+body.dark-mode .page-selector label {
+    color: #e4e6eb;
+}
+
+#pageSelect {
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    background: white;
+    color: #1c1e21;
+    min-width: 280px;
+    transition: all 0.3s;
+}
+
+body.dark-mode #pageSelect {
+    background: #3a3b3c;
+    color: #e4e6eb;
+    border-color: #444;
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    text-align: left;
+    transition: background 0.3s, box-shadow 0.3s;
+}
+
+body.dark-mode .card {
+    background: #242526;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+.card img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #1877f2;
+}
+
+body.dark-mode .card img {
+    border-color: #8ab4f8;
+}
+
+.card div h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #1c1e21;
+}
+
+body.dark-mode .card div h2 {
+    color: #e4e6eb;
+}
+
+.card div p {
+    margin: 8px 0;
+    font-size: 1.1rem;
+    color: #65676b;
+}
+
+body.dark-mode .card div p {
+    color: #b0b3b8;
+}
+
+.loading {
+    text-align: center;
+    font-size: 1.4rem;
+    color: #1877f2;
+    margin: 60px 0;
+}
+
+body.dark-mode .loading {
+    color: #8ab4f8;
+}
+
+.error {
+    background: #ffebee;
+    color: #c62828;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    margin: 20px 0;
+    font-weight: bold;
+}
+
+body.dark-mode .error {
+    background: #4a1a1f;
+    color: #ff8a80;
+}
+
+.hidden { display: none; }
+
+footer {
+    text-align: center;
+    margin-top: 80px;
+    padding: 20px;
+    color: #65676b;
+    font-size: 14px;
+    border-top: 1px solid #ddd;
+    transition: color 0.3s, border-color 0.3s;
+}
+
+body.dark-mode footer {
+    color: #b0b3b8;
+    border-top-color: #444;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .card { 
+        flex-direction: column; 
+        text-align: center; 
+    }
+    .card img { margin-bottom: 20px; }
+    button, #pageSelect { width: 100%; margin: 10px 0; }
+    .page-selector { flex-direction: column; }
+    #themeToggle { 
+        position: static; 
+        margin: 20px auto; 
+        display: inline-flex;
+    }
+}
